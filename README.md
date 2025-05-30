@@ -20,5 +20,9 @@ vector1 = emb.embed_documents([texts]) # e.g. emb.embed_documents(["今天天气
 vector2 emb.embed_query(texts) # e.g. emb.embed_documents("有什么推荐")
 ```
 
+# Tutorials
+
+* Build a chabot with langchain: [https://github.com/hailiang-wang/llm-get-started/tree/master/003_rag_langchain](https://github.com/hailiang-wang/llm-get-started/tree/master/003_rag_langchain)
+
 # License
 [LICENSE](./LICENSE)
