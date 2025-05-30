@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: embeddings-zh
+Version: 0.0.2
+Summary: Embeddings with Chatopera Synonyms for chatbot, RAG.
+Home-page: https://github.com/chatopera/embeddings-zh
+Author: Hai Liang Wang
+Author-email: info@chatopera.com
+License: Chunsong Public License, version 1.0
+Keywords: embeddings,nlp
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+
+
+embeddings-zh
+=====================
+
+Embeddings with Chatopera Synonyms for chatbot, RAG.
+
+https://github.com/chatopera/embeddings-zh
+
+Model: https://github.com/chatopera/Synonyms
+
+pip install -U embeddings-zh
+
+Usage::
+
+    from embeddings_zh import EmbeddingsZh
+
+    emb = EmbeddingsZh()
+    vector1 = emb.embed_documents([texts]) # e.g. emb.embed_documents(["今天天气怎么样", "有什么推荐"])
+    vector2 emb.embed_query(texts) # e.g. emb.embed_documents("有什么推荐")

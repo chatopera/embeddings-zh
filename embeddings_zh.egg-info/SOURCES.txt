@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+embeddings_zh/__init__.py
+embeddings_zh.egg-info/PKG-INFO
+embeddings_zh.egg-info/SOURCES.txt
+embeddings_zh.egg-info/dependency_links.txt
+embeddings_zh.egg-info/requires.txt
+embeddings_zh.egg-info/top_level.txt
