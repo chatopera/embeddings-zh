@@ -1,4 +1,4 @@
-# embeddings-zh
+# Synonyms 中文近义词 Embeddings
 
 Embeddings with Chatopera Synonyms for chatbot, RAG.
 
