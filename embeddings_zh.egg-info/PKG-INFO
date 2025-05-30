@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: embeddings-zh
-Version: 0.0.2
+Version: 0.0.3
 Summary: Embeddings with Chatopera Synonyms for chatbot, RAG.
 Home-page: https://github.com/chatopera/embeddings-zh
 Author: Hai Liang Wang

@@ -52,7 +52,7 @@ class EmbeddingsZh():
 
         for text in texts:
             terms = synonyms.seg(text)[0]
-            v = synonyms.sv(" ".join(terms))
+            v = synonyms.bow(" ".join(terms))
             ret.append(v)
 
         return ret
