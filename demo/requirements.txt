@@ -1,0 +1,16 @@
+env3
+log5
+
+embeddings_zh==0.0.3
+langchain==0.3.16
+langchain-community==0.3.16
+langchain-core==0.3.32
+langchain-experimental==0.3.4
+langchain-text-splitters==0.3.5
+langchain-ollama
+streamlit==1.41.1
+ollama==0.4.8
+pdfplumber==0.11.6
+# fix error, pydantic.errors.PydanticUserError: `OllamaLLM` is not fully defined; you should define `BaseCache`, then call `OllamaLLM.model_rebuild()`.
+# https://blog.csdn.net/WB231444/article/details/144540647
+pydantic==2.9.2

@@ -1,4 +1,4 @@
-# Synonyms 中文近义词 Embeddings
+# embeddings-zh
 
 Embeddings with Chatopera Synonyms for chatbot, RAG.
 
@@ -22,7 +22,7 @@ vector2 emb.embed_query(texts) # e.g. emb.embed_documents("有什么推荐")
 
 # Tutorials
 
-* Build a chabot with langchain: [https://github.com/hailiang-wang/llm-get-started/tree/master/003_rag_langchain](https://github.com/hailiang-wang/llm-get-started/tree/master/003_rag_langchain)
+* Build a chabot with langchain: [demo](./demo/)
 
 # License
 [LICENSE](./LICENSE)
