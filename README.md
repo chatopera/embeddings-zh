@@ -2,9 +2,9 @@
 
 Embeddings with Chatopera Synonyms for chatbot, RAG.
 
-https://github.com/chatopera/embeddings-zh
+[GitHub](https://github.com/chatopera/embeddings-zh) | [Gitee](https://gitee.com/chatopera/embeddings-zh)
 
-Model: https://github.com/chatopera/Synonyms
+Model: [GitHub](https://github.com/chatopera/Synonyms) | [Gitee](https://gitee.com/chatopera/Synonyms)
 
 ```
 pip install -U embeddings-zh
