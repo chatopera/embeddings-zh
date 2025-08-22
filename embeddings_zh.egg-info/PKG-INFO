@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: embeddings-zh
-Version: 0.0.5
+Version: 0.0.6
 Summary: Embeddings with Chatopera Synonyms for chatbot, RAG.
 Home-page: https://github.com/chatopera/embeddings-zh
 Author: Hai Liang Wang
@@ -15,6 +15,17 @@ Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.11
 License-File: LICENSE
+Requires-Dist: synonyms>=3.23.10
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
 
 
 embeddings-zh

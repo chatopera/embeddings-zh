@@ -23,7 +23,7 @@ Usage::
 
 setup(
     name='embeddings-zh',
-    version='0.0.5',
+    version='0.0.6',
     description='Embeddings with Chatopera Synonyms for chatbot, RAG.',
     long_description=LONGDOC,
     author='Hai Liang Wang',
@@ -42,7 +42,7 @@ setup(
     keywords='embeddings,nlp',
     packages=find_packages(),
     install_requires=[
-        'synonyms>=3.23.7'
+        'synonyms>=3.23.10'
     ],
     package_data={
         'synonyms': [

@@ -30,7 +30,55 @@ else:
     unicode = str
 
 from typing import Any, Dict, List, Optional
-import synonyms
+from functools import lru_cache
+from synonyms import seg, v, np, STOPWORDS
+
+_flat_sum_array = lambda x: np.sum(x, axis=0)  # 分子
+
+@lru_cache(maxsize=12800) 
+def lookup_word_vector(word):
+    '''
+    Look up a word's vecor
+    With cache, https://gist.github.com/promto-c/04b91026dd66adea9e14346ee79bb3b8
+    '''
+    try:
+        return v(word)
+    except KeyError as error:
+        return None
+
+
+def get_text_vector(text):
+    '''
+    Get Text vector
+    '''
+    words, tags = seg(text) # 词性，https://gist.github.com/luw2007/6016931
+
+    terms = set()
+    vectors = []
+    for (w, t) in zip(words, tags):
+        # 停用词
+        if w in STOPWORDS:
+            continue
+
+        # 过滤数词，量词
+        if t.startswith("m") or \
+            t.startswith("q"):
+            continue
+
+        # 去重
+        if w in terms:
+            continue
+
+        terms.add(w)
+        vector = lookup_word_vector(w)
+        if vector is not None:
+            vectors.append(vector)
+
+    if len(vectors) == 0:
+        raise RuntimeError("Invalid vector length, none vector found.")
+
+    v = _flat_sum_array(vectors)
+    return v
 
 class EmbeddingsZh():
     
@@ -51,9 +99,11 @@ class EmbeddingsZh():
         texts = list(map(lambda x: x.replace("\n", " "), texts))
 
         for text in texts:
-            terms = synonyms.seg(text)[0]
-            v = synonyms.bow(" ".join(terms))
-            ret.append(v)
+            try:
+                v = get_text_vector(text)
+                ret.append(v)
+            except RuntimeError as error:
+                ret.append(None)
 
         return ret
 
